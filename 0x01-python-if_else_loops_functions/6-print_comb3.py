@@ -4,4 +4,4 @@ for tens_digit in range(0, 9):
         if tens_digit == 8:
             print("{}{}".format(tens_digit, ones_digit))
         else:
-            print("{}{}".format(tens_digit,ones_digit), end=", ")
+            print("{}{}".format(tens_digit, ones_digit), end=", ")
