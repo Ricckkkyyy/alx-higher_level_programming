@@ -1,0 +1,16 @@
+# Test the function with the provided examples
+if __name__ == "__main__":
+    print(add_integer(1, 2))        # Output: 3
+    print(add_integer(100, -2))     # Output: 98
+    print(add_integer(2))           # Output: 100
+    print(add_integer(100.3, -2))   # Output: 98
+
+    try:
+        print(add_integer(4, "School"))
+    except Exception as e:
+        print(e)  # Output: b must be an integer or a float
+
+    try:
+        print(add_integer(None))
+    except Exception as e:
+        print(e)  # Output: a must be an integer or a float
