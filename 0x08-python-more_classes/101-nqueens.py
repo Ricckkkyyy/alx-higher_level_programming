@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 import sys
 
+
 def print_solution(solution):
     """Print the board configuration."""
     print([[row, col] for row, col in enumerate(solution)])
+
 
 def is_safe(solution, row, col):
     """Check if placing a queen at (row, col) is safe."""
@@ -13,6 +15,7 @@ def is_safe(solution, row, col):
            solution[i] + i == col + row:
             return False
     return True
+
 
 def solve_nqueens(solution, row, n):
     """Solve the N Queens problem using backtracking."""
@@ -24,6 +27,7 @@ def solve_nqueens(solution, row, n):
         if is_safe(solution, row, col):
             solution[row] = col
             solve_nqueens(solution, row + 1, n)
+
 
 def main():
     if len(sys.argv) != 2:
@@ -42,6 +46,7 @@ def main():
 
     solution = [-1] * n
     solve_nqueens(solution, 0, n)
+
 
 if __name__ == "__main__":
     main()
